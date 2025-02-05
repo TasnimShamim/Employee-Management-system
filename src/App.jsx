@@ -9,20 +9,24 @@ const App = () => {
   //   setLocalStorage()
   //   getLocalStorage()
   // },)
-  const [user, setUser] = useState(null);
-  const handleLogin = (email, password) => {
-    if (email == "admin@me.com" && password == "123") {
-      console.log("This is Admin");
-    } else if (email == "user@me.com" && password == "123") {
-      console.log("This is User");
-    } else {
-      alert("Invalid Credentials");
+  const [user, setUser] = useState(null)
+  const handleLogin = (email, password) =>{
+    if (email == "admin@me.com" && password == "123"){
+     setUser('admin')
+     console.log(user)
+    }else if(email == "user@me.com" && password == "123"){
+     setUser('employee')
+     console.log(user)
+    } 
+    else {
+      alert("Invalid Credentials")
     }
-  };
-  handleLogin("user@me.com", 123);
+  }
+  // handleLogin("user@me.com", 123);
   return (
     <>
-      {!user ? <Login /> : ""}
+      {!user ? <Login handleLogin={handleLogin} /> : ""}
+      {user =='admin'? <AdminDashboard/> : <EmployeeDashboard/>}
       {/* <EmployeeDashboard/> */}
       {/* <AdminDashboard/> */}
     </>
