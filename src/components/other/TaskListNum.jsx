@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TaskListNum = () => {
+const TaskListNum = ({data}) => {
   return (
     <div className='flex mt-10 justify-between gap-5 screen'>
        <div className=' w-[45%] rounded-xl px-10 py-5 bg-red-400'>

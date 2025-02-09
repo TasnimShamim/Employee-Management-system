@@ -33,11 +33,11 @@ const App = () => {
        const employee=authData.employees.find((e)=>email==e.email && e.password==password)
         if(employee){
         setUser('employee')
+        setloggedInUserData(employee)
         console.log(user)
      localStorage.setItem('loggedInUser',JSON.stringify({role:'employees'}))
     } 
-        }
-     
+        } 
     else {
       alert("Invalid Credentials")
     }
@@ -47,7 +47,7 @@ const App = () => {
   return (
     <>
       {!user ? <Login handleLogin={handleLogin} /> : ""}
-      { user =='admin'? <AdminDashboard/> : <EmployeeDashboard / > }
+      { user =='admin'? <AdminDashboard/> :(user == 'employee' ? <EmployeeDashboard data={loggedInUserData}/>:null)}
       {/* <EmployeeDashboard/> */}
       {/* <AdminDashboard/> */}
     </>
