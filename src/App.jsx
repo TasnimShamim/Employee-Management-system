@@ -43,7 +43,7 @@ const App = () => {
         setUser('employee')
         setloggedInUserData(employee)
         console.log(user)
-     localStorage.setItem('loggedInUser',JSON.stringify({role:'employees',data:employees}))
+     localStorage.setItem('loggedInUser',JSON.stringify({role:'employees',data:employee}))
     } 
         } 
     else {
