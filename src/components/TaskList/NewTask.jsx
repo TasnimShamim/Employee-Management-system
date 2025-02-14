@@ -12,7 +12,7 @@
             {data.taskDescription}
         </p>
        <div className='mt-40'>
-        <button className='bg-blue-500 rounded font-medium py-1 px-2 text-xs'>Accept Task</button>
+        <button className='bg-green-500 rounded font-medium py-1 px-2 text-xs'>Accept Task</button>
         </div> 
       </div>
    )

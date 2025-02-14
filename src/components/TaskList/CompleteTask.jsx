@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CompleteTask = () => {
+const CompleteTask = ({data}) => {
   return (
     <div className=" flex-shrink-0 h-full p-5 w-[300px] bg-pink-200 rounded-xl">
         <div className="flex justify-between items-center">
@@ -12,7 +12,7 @@ const CompleteTask = () => {
           {data.taskDescription}
         </p>
        <div className='mt-2'>
-        <button className='w-full'>Complete</button>
+        <button className='w-full bg-green-500 mt-20 text-sm rounded py-2 '>Complete</button>
         </div> 
       </div>
   )
