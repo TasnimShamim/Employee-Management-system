@@ -15,8 +15,7 @@ const AcceptTask = ({data}) =>{
             <button className='bg-green-500 py-1 px-2 text-sm rounded'>Mark as Completed</button>
             <button className='bg-red-500 py-1 px-4 text-sm rounded'>Mark as Failed</button>
         </div>
-      </div>
-     
+      </div>  
   )
 }
 

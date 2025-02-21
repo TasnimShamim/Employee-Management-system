@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 
 const Login = ({handleLogin}) => {
     
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const submitHandler =(e)=>{
+    const submitHandler = (e)=>{
         e.preventDefault()
         handleLogin(email,password)
         console.log("email is",email)
@@ -29,10 +29,10 @@ const Login = ({handleLogin}) => {
             setEmail(e.target.value)
           }}
            required
-            className=" mb-2 outline-none bg-transparent border-2 border-emerald-600  font-medium rounded-full text-lg px-5 py-4 placeholder:text-gray-500"
-            type="email"
+            className=" mb-2 outline-none bg-transparent border-2 border-emerald-600 font-medium rounded-full text-lg px-5 py-4 placeholder:text-gray-500"type="email"
             placeholder="Enter your email"
           />
+            
           <input
           value={password}
           onChange={(e)=>{
